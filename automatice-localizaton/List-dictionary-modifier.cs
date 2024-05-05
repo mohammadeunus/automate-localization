@@ -18,6 +18,20 @@ internal static class List_dictionary_modifier
         }
         return matchedKeys;
     }
+    public static Dictionary<string, string> GetMatchedKeyValues(List<string> fileStrings, Dictionary<string, string> stringKeys)
+    {
+        Dictionary<string, string> matchedKeys = new Dictionary<string, string>();
+        foreach (string str in fileStrings)
+        {
+            // Check if the value exists in the dictionary
+            KeyValuePair<string, string> matchingPair = stringKeys.FirstOrDefault(x => x.Value == str);
+            if (!string.IsNullOrEmpty(matchingPair.Key) && !matchedKeys.ContainsKey(matchingPair.Key))
+            {
+                matchedKeys.Add(matchingPair.Key, matchingPair.Value);
+            }
+        }
+        return matchedKeys;
+    }
     public static List<string> GetNonMatchedKeys(List<string> fileStrings, Dictionary<string,string> stringKeys)
     {
         List<string> nonMatchedKeys = new List<string>();

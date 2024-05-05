@@ -37,7 +37,10 @@ internal class Read_cshtml_file
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
-
+        foreach (var item in strings)
+        {
+            Console.WriteLine(item);
+        }
         return strings;
     }
     static bool ContainsRegularExpression(string input)

@@ -10,11 +10,9 @@ class Program
         List<string> strings = Read_cshtml_file.ExtractStringsFromCSHTML(filePath);
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
 
-        List<string> matchedKeys = List_dictionary_modifier.GetMatchedKeys(strings, stringKeys);
-        List<string> nonMatchedKeys = List_dictionary_modifier.GetNonMatchedKeys(strings, stringKeys);
+        Dictionary<string, string> matchedKeys = List_dictionary_modifier.GetMatchedKeyValues(strings, stringKeys);
 
         Console.WriteLine(matchedKeys);
-        Console.WriteLine(nonMatchedKeys);
 
     }
 
