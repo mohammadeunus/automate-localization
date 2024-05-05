@@ -13,6 +13,7 @@ class Program
         Dictionary<string, string> matchedKeys = List_dictionary_modifier.GetMatchedKeyValues(strings, stringKeys);
 
         Console.WriteLine(matchedKeys);
+        Read_cshtml_file.OverrideFile(filePath, matchedKeys);
 
     }
 
