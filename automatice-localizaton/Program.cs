@@ -1,8 +1,4 @@
 ﻿using automatice_localizaton;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.RegularExpressions;
 
 class Program
 {
@@ -14,10 +10,12 @@ class Program
         List<string> strings = Read_cshtml_file.ExtractStringsFromCSHTML(filePath);
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
 
-        Console.WriteLine(stringKeys.Count);
-        Console.WriteLine(strings.Count);
+        List<string> matchedKeys = List_dictionary_modifier.GetMatchedKeys(strings, stringKeys);
+        List<string> nonMatchedKeys = List_dictionary_modifier.GetNonMatchedKeys(strings, stringKeys);
+
+        Console.WriteLine(matchedKeys);
+        Console.WriteLine(nonMatchedKeys);
 
     }
-
 
 }
