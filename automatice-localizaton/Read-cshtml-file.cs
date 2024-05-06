@@ -25,7 +25,9 @@ internal class Read_cshtml_file
                     MatchCollection matches = Regex.Matches(line, @">(.*?)<");
                     foreach (Match match in matches)
                     {
-                        string output = match.Groups[1].Value.Trim();
+                        string output = match.Groups[1].Value;
+                        if (!string.IsNullOrEmpty(output)) output = output.Trim();
+
                         if (!ContainsRegularExpression(output) && !string.IsNullOrEmpty(output))
                         {
                             strings.Add(output);
@@ -43,7 +45,7 @@ internal class Read_cshtml_file
     }
     static bool ContainsRegularExpression(string input)
     {
-        string regexPattern = @"[.*+?^${}()|\[\]\\]";
+        string regexPattern = @"[*+^${}()|\[\]\\]";
 
         return Regex.IsMatch(input, regexPattern);
     }
@@ -94,6 +96,8 @@ internal class Read_cshtml_file
                     writer.WriteLine(modifiedLine);
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("File override successful.");
         }
         catch (Exception ex)
