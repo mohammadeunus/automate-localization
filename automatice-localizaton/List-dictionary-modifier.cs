@@ -76,10 +76,13 @@ internal static class List_dictionary_modifier
         string[] words = input.Split(' ');
 
         StringBuilder sb = new StringBuilder();
+        var wordsCount = words.Count();
 
-        foreach (string word in words)
+        if (wordsCount > 5) wordsCount = 5;
+
+        for (int i = 0; i < wordsCount; i++)
         {
-            sb.Append(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(word));
+            sb.Append(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(words[i]));
         }
 
         return sb.ToString();
