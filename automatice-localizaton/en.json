@@ -2271,6 +2271,7 @@
   "PleaseSelectColor": "Please select Color",
   "PleaseSelectWeathering": "Please select Weathering",
   "PleaseSelectHardness": "Please select Hardness",
-  "PleaseSelectFracture Density": "Please select Fracture Density"
+  "PleaseSelectFracture Density": "Please select Fracture Density",
+  "PleaseClick on the map to specify the location of": "Please click on the map to specify the location of",
 
 }

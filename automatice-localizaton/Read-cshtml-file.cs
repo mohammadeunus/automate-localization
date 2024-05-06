@@ -38,11 +38,7 @@ internal class Read_cshtml_file
         catch (Exception ex)
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
-        }
-        foreach (var item in strings)
-        {
-            Console.WriteLine(item);
-        }
+        } 
         return strings;
     }
     static bool ContainsRegularExpression(string input)
@@ -94,7 +90,7 @@ internal class Read_cshtml_file
 
 
                     }
-                     
+
                     writer.WriteLine(modifiedLine);
                 }
             }
@@ -105,31 +101,46 @@ internal class Read_cshtml_file
             Console.WriteLine($"Error overriding file: {ex.Message}");
         }
     }
-
-    public static void OverrideFile2(string filePath, Dictionary<string, string> matchedKeys)
+    public static void OverrideJsFile(string filePath, Dictionary<string, string> matchedKeys)
     {
         try
         {
-            // Read the complete file and replace the text
-            using (StreamReader reader = new StreamReader(filePath))
+            // Read all lines from the file
+            List<string> lines = new List<string>();
+            using (StreamReader sr = new StreamReader(filePath))
             {
-                string content = reader.ReadLine();
-                //content = Regex.Replace(content, findText, replaceText);
-
-                // Write the content back to the file
-                using (StreamWriter writer = new StreamWriter(filePath))
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    writer.Write(content);
+                    lines.Add(line);
                 }
             }
+
+            // Create a StreamWriter to write to the file
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                foreach (string line in lines)
+                {
+                    string modifiedLine = line;
+
+                    foreach (KeyValuePair<string, string> entry in matchedKeys)
+                    {
+                        if (Regex.IsMatch(line,entry.Value))
+                        {
+                            string theString = "l(\'" + entry.Key + "\')";
+                            modifiedLine = line.Replace(entry.Value, theString);
+                            break;
+                        }
+                    }
+
+                    writer.WriteLine(modifiedLine);
+                }
+            }
+            Console.WriteLine("File override successful.");
         }
         catch (Exception ex)
         {
-            Console.WriteLine("An error occurred: " + ex.Message);
-            // Handle the exception as needed (logging, etc.)
+            Console.WriteLine($"Error overriding file: {ex.Message}");
         }
-
-
     }
-
 }

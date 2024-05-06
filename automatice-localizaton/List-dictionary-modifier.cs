@@ -1,4 +1,5 @@
-﻿ 
+﻿
+
 
 namespace automatice_localizaton;
 
@@ -21,17 +22,36 @@ internal static class List_dictionary_modifier
     public static Dictionary<string, string> GetMatchedKeyValues(List<string> fileStrings, Dictionary<string, string> stringKeys)
     {
         Dictionary<string, string> matchedKeys = new Dictionary<string, string>();
-        foreach (string str in fileStrings)
+        List<string> notFoundStrings = new();
+        foreach (string eachStr in fileStrings)
         {
             // Check if the value exists in the dictionary
-            KeyValuePair<string, string> matchingPair = stringKeys.FirstOrDefault(x => x.Value == str);
-            if (!string.IsNullOrEmpty(matchingPair.Key) && !matchedKeys.ContainsKey(matchingPair.Key))
+            KeyValuePair<string, string> foundMatchingPair = stringKeys.FirstOrDefault(x => x.Value == eachStr);
+            if (!string.IsNullOrEmpty(foundMatchingPair.Key) && !matchedKeys.ContainsKey(foundMatchingPair.Key))
             {
-                matchedKeys.Add(matchingPair.Key, matchingPair.Value);
+                matchedKeys.Add(foundMatchingPair.Key, foundMatchingPair.Value);
             }
+            else if (string.IsNullOrEmpty(foundMatchingPair.Key))
+            {
+                notFoundStrings.Add(eachStr);
+            }
+        }
+        if (notFoundStrings.Count>0)
+        {
+            GenerateJsonFileforStringNotInEnJson(notFoundStrings);
         }
         return matchedKeys;
     }
+
+    private static void GenerateJsonFileforStringNotInEnJson(List<string> notFoundStrings)
+    {
+        foreach (var item in notFoundStrings)
+        {
+            string output = "\"" + item + "\"" + ":"+ "\"" + item + "\"";
+            Console.WriteLine(output + ",");
+        }
+    }
+
     public static List<string> GetNonMatchedKeys(List<string> fileStrings, Dictionary<string,string> stringKeys)
     {
         List<string> nonMatchedKeys = new List<string>();
