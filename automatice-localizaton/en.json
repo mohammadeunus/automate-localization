@@ -2274,4 +2274,12 @@
   "PleaseSelectFracture Density": "Please select Fracture Density",
   "PleaseClick on the map to specify the location of": "Please click on the map to specify the location of",
 
+
+  "BoreholePlanningModalHeader": "Plan for your subsurface investigation ahead, by preparing a list of the test holes planned for this project. Once field investigation of a test hole is started, Edit that test hole from the table below. This will create a test hole in RSLog and opens its data entry page:",
+  "PleaseClickOnMapToSpecifyLocation": "Please click on the map to specify the location of",
+  "CopyBoreholeDuplicate": "Copy Borehole (duplicate)",
+  "PleaseSelectThickness": "Please select Thickness",
+  "PleaseSelectHealing": "Please select Healing",
+  "PleaseSelectRoughness": "Please select Roughness"
+
 }

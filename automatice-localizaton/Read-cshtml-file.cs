@@ -76,6 +76,7 @@ internal class Read_cshtml_file
                     foreach (Match match in matches)
                     {
                         string output = match.Groups[1].Value;
+                        if (!string.IsNullOrEmpty(output)) output = output.Trim();
 
                         if (!ContainsRegularExpression(output) && !string.IsNullOrEmpty(output))
                         {
