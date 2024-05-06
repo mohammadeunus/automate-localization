@@ -81,20 +81,20 @@ internal class Read_cshtml_file
 
                         if (!ContainsRegularExpression(output) && !string.IsNullOrEmpty(output))
                         {
-
                             foreach (KeyValuePair<string, string> entry in matchedKeys)
                             {
-                                string theString = '@' + "['" + entry.Value + "']";
-                                modifiedLine = modifiedLine.Replace(entry.Key, theString);
-                                break; // Move to the next line
+                                if (entry.Value.Equals(output))
+                                {
+                                    string theString = '@' + "L[\"" + entry.Key + "\"]";
+                                    modifiedLine = line.Replace(entry.Value, theString);
+                                    break;
+                                }
                             }
                         }
 
 
                     }
                      
-
-                    // Write the modified line to the file
                     writer.WriteLine(modifiedLine);
                 }
             }
@@ -104,6 +104,32 @@ internal class Read_cshtml_file
         {
             Console.WriteLine($"Error overriding file: {ex.Message}");
         }
+    }
+
+    public static void OverrideFile2(string filePath, Dictionary<string, string> matchedKeys)
+    {
+        try
+        {
+            // Read the complete file and replace the text
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                string content = reader.ReadLine();
+                //content = Regex.Replace(content, findText, replaceText);
+
+                // Write the content back to the file
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    writer.Write(content);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An error occurred: " + ex.Message);
+            // Handle the exception as needed (logging, etc.)
+        }
+
+
     }
 
 }
