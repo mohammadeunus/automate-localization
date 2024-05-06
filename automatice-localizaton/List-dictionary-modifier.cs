@@ -1,6 +1,10 @@
 ﻿
 
 
+using System.Globalization;
+using System.Text;
+using System.Text.RegularExpressions;
+
 namespace automatice_localizaton;
 
 internal static class List_dictionary_modifier
@@ -31,7 +35,7 @@ internal static class List_dictionary_modifier
             {
                 matchedKeys.Add(foundMatchingPair.Key, foundMatchingPair.Value);
             }
-            else if (string.IsNullOrEmpty(foundMatchingPair.Key))
+            else if (string.IsNullOrEmpty(foundMatchingPair.Key) && !ContainsRegularExpression(eachStr))
             {
                 notFoundStrings.Add(eachStr);
             }
@@ -47,7 +51,7 @@ internal static class List_dictionary_modifier
     {
         foreach (var item in notFoundStrings)
         {
-            string output = "\"" + item + "\"" + ":"+ "\"" + item + "\"";
+            string output = "\"" + ConvertToCamelCase(item) + "\"" + ":"+ "\"" + item + "\"";
             Console.WriteLine(output + ",");
         }
     }
@@ -65,5 +69,30 @@ internal static class List_dictionary_modifier
             }
         }
         return nonMatchedKeys;
+    }
+
+    private static string ConvertToCamelCase(string input)
+    {
+        string[] words = input.Split(' ');
+
+        StringBuilder sb = new StringBuilder();
+
+        foreach (string word in words)
+        {
+            sb.Append(CultureInfo.CurrentCulture.TextInfo.ToTitleCase(word));
+        }
+
+        return sb.ToString();
+    }
+    static bool ContainsRegularExpression(string input)
+    {
+        string regexPattern = @"[*+^${}()|\[\]\\]";
+
+        bool check =  Regex.IsMatch(input, regexPattern);
+        bool check2 =  Regex.IsMatch(input, "@");
+        bool check3 =  input.Equals("/");
+        bool check4 =  input.Equals("&Times");
+
+        return check || check2 || check3 || check4;
     }
 }
