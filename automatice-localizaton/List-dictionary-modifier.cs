@@ -94,7 +94,7 @@ internal static class List_dictionary_modifier
         bool check =  Regex.IsMatch(input, regexPattern);
         bool check2 =  Regex.IsMatch(input, "@");
         bool check3 =  input.Equals("/");
-        bool check4 =  input.Equals("&times");
+        bool check4 =  input.Equals("&times;");
 
         return check || check2 || check3 || check4;
     }
