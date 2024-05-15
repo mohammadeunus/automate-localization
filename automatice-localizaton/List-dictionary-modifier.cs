@@ -98,4 +98,18 @@ internal static class List_dictionary_modifier
 
         return check || check2 || check3 || check4;
     }
+
+    internal static List<string> GetNonMatchingKeys(List<string> allUsedLocalizedKey, Dictionary<string, string> stringKeys)
+    {
+        List<string> nonMatchingKeys = [];
+        var stringKeysKeys = stringKeys.Keys;
+        foreach (var item in allUsedLocalizedKey)
+        {
+            if (!stringKeysKeys.Contains(item))
+            {
+                nonMatchingKeys.Add(item);
+            }
+        }
+        return nonMatchingKeys;
+    }
 }

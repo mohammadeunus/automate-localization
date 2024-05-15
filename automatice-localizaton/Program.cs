@@ -4,17 +4,19 @@ class Program
 {
     static void Main()
     {
-        string filePath = Console.ReadLine();
-        string jsonPath = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\en.json";
-
-        #region abstract
+        string solutionDirectory = Console.ReadLine();
+        string jsonPath = "D:\\source\\repos\\automate-localization\\automatice-localizaton\\en.json";
+        
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
 
-        List<string> strings = Read_cshtml_file.ExtractStringsFromCSHTML(filePath);
-        List_dictionary_modifier.GetMatchedKeyValues(strings, stringKeys);
-        #endregion
+        //string[] jsFiles = Directory.GetFiles(solutionDirectory, $"*.{".js"}", SearchOption.AllDirectories);
+        string[] csFiles = Directory.GetFiles(solutionDirectory, $"*.{"cs"}", SearchOption.AllDirectories);
 
-        Read_cshtml_file.OverrideFile(filePath, stringKeys);
+        List<string> allUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles);
+
+        List<string> missingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(allUsedLocalizedKey, stringKeys);
+
+        foreach (var projectFile in missingKeysInJsonFile) Console.WriteLine(projectFile);
 
     }
 

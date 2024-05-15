@@ -40,7 +40,7 @@ internal class Read_cshtml_file
         catch (Exception ex)
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
-        } 
+        }
         return strings;
     }
     static bool ContainsRegularExpression(string input)
@@ -130,7 +130,7 @@ internal class Read_cshtml_file
 
                     foreach (KeyValuePair<string, string> entry in matchedKeys)
                     {
-                        if (Regex.IsMatch(line,entry.Value))
+                        if (Regex.IsMatch(line, entry.Value))
                         {
                             string theString = "l(\'" + entry.Key + "\')";
                             modifiedLine = line.Replace(entry.Value, theString);
@@ -147,5 +147,39 @@ internal class Read_cshtml_file
         {
             Console.WriteLine($"Error overriding file: {ex.Message}");
         }
+    }
+
+    internal static List<string> GetAllUsedLocalizedKey(string[] csFiles)
+    {
+        List<string> missingKeyInJsonFile = [];
+
+        foreach (var csFilePath in csFiles)
+        {
+            List<string> lines = new List<string>();
+            using (StreamReader sr = new StreamReader(csFilePath))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lines.Add(line);
+                }
+            }
+
+            List<string> extractedStrings = new List<string>();
+
+            foreach (string line in lines)
+            {
+                MatchCollection matches = Regex.Matches(line, @"L\[""(.*?)""\]");
+                foreach (Match match in matches)
+                {
+                    string extractedString = match.Groups[1].Value;
+                    extractedStrings.Add(extractedString);
+                }
+            }
+
+            missingKeyInJsonFile.AddRange(extractedStrings);
+        }
+
+        return missingKeyInJsonFile;
     }
 }
