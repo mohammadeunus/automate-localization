@@ -19,8 +19,8 @@ class Program
         List<string> csMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(csAllUsedLocalizedKey, stringKeys);
         List<string> jsMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(jsAllUsedLocalizedKey, stringKeys);
 
-        foreach (var projectFile in csMissingKeysInJsonFile) Console.WriteLine(projectFile);
-        foreach (var projectFile in jsMissingKeysInJsonFile) Console.WriteLine(projectFile);
+        foreach (var missedString in csMissingKeysInJsonFile) Console.WriteLine(missedString);
+        foreach (var missedString in jsMissingKeysInJsonFile) Console.WriteLine(missedString);
 
     }
 
