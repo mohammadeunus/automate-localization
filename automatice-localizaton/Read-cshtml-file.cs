@@ -149,7 +149,7 @@ internal class Read_cshtml_file
         }
     }
 
-    internal static List<string> GetAllUsedLocalizedKey(string[] csFiles)
+    internal static List<string> GetAllUsedLocalizedKey(string[] csFiles, string regextPattern)
     {
         List<string> missingKeyInJsonFile = [];
 
@@ -169,7 +169,7 @@ internal class Read_cshtml_file
 
             foreach (string line in lines)
             {
-                MatchCollection matches = Regex.Matches(line, @"L\[""(.*?)""\]");
+                MatchCollection matches = Regex.Matches(line, regextPattern);
                 foreach (Match match in matches)
                 {
                     string extractedString = match.Groups[1].Value;
