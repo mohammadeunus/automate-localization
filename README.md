@@ -1,6 +1,5 @@
 # automate-localization
- 
-This project automatically replaces strings enclosed within Angle Brackets > < in CSHTML files with the corresponding keys extracted from the en.json file, adhering to the localization format.
+console application that finds out all the localized key that has been used across the application but is not available in en.json
 
 # Todo
-- extract the strings that have space in localized-string 
+- add file name along with? 
