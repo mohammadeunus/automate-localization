@@ -4,9 +4,9 @@ class Program
 {
     static void Main()
     {
-        string csSolutionDirectory = "D:\\source\\repos\\RSLog2.0\\src\\Rocscience.RSLog.Application";
-        string jsSolutionDirectory = "D:\\source\\repos\\RSLog2.0\\src\\Rocscience.RSLog.Web\\Pages";
-        string jsonPath = "D:\\source\\repos\\automate-localization\\automatice-localizaton\\en.json";
+        string jsSolutionDirectory = "F:\\sampleAbpProject\\RSLog2.0\\src\\Rocscience.RSLog.Web";
+        string csSolutionDirectory = "F:\\sampleAbpProject\\RSLog2.0\\src\\Rocscience.RSLog.Web";
+        string jsonPath = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\en.json";
         
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
 

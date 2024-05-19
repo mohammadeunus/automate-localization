@@ -178,6 +178,7 @@ internal class Read_cshtml_file
             }
 
             missingKeyInJsonFile.AddRange(extractedStrings);
+            missingKeyInJsonFile.Add("-------------------");
         }
 
         return missingKeyInJsonFile;
