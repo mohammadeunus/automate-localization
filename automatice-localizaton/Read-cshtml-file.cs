@@ -183,4 +183,61 @@ internal class Read_cshtml_file
 
         return missingKeyInJsonFile;
     }
+
+    public static void OverrideInLocalizedString(string filePath, Dictionary<string, string> matchedKeys)
+    {
+        try
+        {
+            // Read all lines from the file
+            List<string> lines = new List<string>();
+            using (StreamReader sr = new StreamReader(filePath))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lines.Add(line);
+                }
+            }
+
+            // Create a StreamWriter to write to the file
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                foreach (string line in lines)
+                {
+                    string modifiedLine = line;
+
+                    MatchCollection matches = Regex.Matches(line, @">(.*?)<");
+                    foreach (Match match in matches)
+                    {
+                        string output = match.Groups[1].Value;
+                        if (!string.IsNullOrEmpty(output)) output = output.Trim();
+
+                        if (!ContainsRegularExpression(output) && !string.IsNullOrEmpty(output))
+                        {
+                            foreach (KeyValuePair<string, string> entry in matchedKeys)
+                            {
+                                if (entry.Value.Equals(output))
+                                {
+                                    string theString = '@' + "L[\"" + entry.Key + "\"]";
+                                    modifiedLine = line.Replace(entry.Value, theString);
+                                    break;
+                                }
+                            }
+                        }
+
+
+                    }
+
+                    writer.WriteLine(modifiedLine);
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("File override successful.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error overriding file: {ex.Message}");
+        }
+    }
 }
