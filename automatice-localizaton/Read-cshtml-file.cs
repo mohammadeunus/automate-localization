@@ -197,7 +197,7 @@ internal class Read_cshtml_file
                 {
                     string modifiedLine = line;
 
-                    MatchCollection matches = Regex.Matches(line, @">(.*?)<");
+                    MatchCollection matches = Regex.Matches(line, @"L\[""(.*?)""\]");
                     foreach (Match match in matches)
                     {
                         string output = match.Groups[1].Value;
@@ -209,8 +209,7 @@ internal class Read_cshtml_file
                             {
                                 if (entry.Value.Equals(output))
                                 {
-                                    string theString = '@' + "L[\"" + entry.Key + "\"]";
-                                    modifiedLine = line.Replace(entry.Value, theString);
+                                    modifiedLine = line.Replace(entry.Value, entry.Key);
                                     break;
                                 }
                             }
