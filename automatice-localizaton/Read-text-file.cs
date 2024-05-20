@@ -5,11 +5,8 @@ using System.Linq;
 
 public static class Read_text_file
 {
-    internal static List<string> GetAllUniqueValues(string txtFilePath)
+    internal static List<string> GetAllUniqueValues(List<string> lines)
     {
-        // Read all lines from the file
-        var lines = File.ReadAllLines(txtFilePath);
-
         var uniqueValues = new Dictionary<string, string>();
 
         foreach (var line in lines)
@@ -25,6 +22,12 @@ public static class Read_text_file
 
         var formattedList = uniqueValues.Select(kvp => $"\"{kvp.Key}\" : \"{kvp.Value}\"").ToList();
         return formattedList;
+    }
+
+    internal static List<string> GetAsList(string txtFilePath)
+    {
+        var lines = File.ReadAllLines(txtFilePath);
+        return lines.ToList();
     }
 
     private static string GenerateKey(string value)

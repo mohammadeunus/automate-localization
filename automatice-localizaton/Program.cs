@@ -6,22 +6,23 @@ class Program
     {
         string csSolutionDirectory = "F:\\sampleAbpProject\\RSLog2.0\\src\\Rocscience.RSLog.Web";
         string jsonPath = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\files\\en.json";
-        string txtFlie = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\files\\rslogmissedkeys.txt";
+        string txtFilePath = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\files\\rslogmissedkeys.txt";
         
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
 
         string[] csFiles = Directory.GetFiles(csSolutionDirectory, $"*.{"cshtml"}", SearchOption.AllDirectories);
 
-        //List<string> csAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"L\[""(.*?)""\]");
-        //List<string> jsAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"l\('([^']*)'\)");
-        List<string> UniqueValues = Read_text_file.GetAllUniqueValues(txtFlie);
+        // get values as list in txtList
+        List<string> txtList = Read_text_file.GetAsList(txtFilePath);
 
-        //List<string> csMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(csAllUsedLocalizedKey, stringKeys);
-        //List<string> jsMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(jsAllUsedLocalizedKey, stringKeys);
+        // remove duplicate from the txtList
 
-        //foreach (var missedString in csMissingKeysInJsonFile) Console.WriteLine(missedString);
+        // remove matching value with stringKeys from the txtList
+
+        // generate unique key from the txtList
+        List<string> UniqueValues = Read_text_file.GetAllUniqueValues(txtList); 
+        
         foreach (var missedString in UniqueValues) Console.WriteLine(missedString);
-
     }
 
 }
