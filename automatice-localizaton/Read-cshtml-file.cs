@@ -188,16 +188,7 @@ internal class Read_cshtml_file
     {
         try
         {
-            // Read all lines from the file
-            List<string> lines = new List<string>();
-            using (StreamReader sr = new StreamReader(filePath))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    lines.Add(line);
-                }
-            }
+            List<string> lines = GetAsList(filePath);
 
             // Create a StreamWriter to write to the file
             using (StreamWriter writer = new StreamWriter(filePath))
@@ -239,5 +230,11 @@ internal class Read_cshtml_file
         {
             Console.WriteLine($"Error overriding file: {ex.Message}");
         }
+    }
+
+    internal static List<string> GetAsList(string txtFilePath)
+    {
+        var lines = File.ReadAllLines(txtFilePath);
+        return lines.ToList();
     }
 }
