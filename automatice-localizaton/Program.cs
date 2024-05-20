@@ -5,7 +5,8 @@ class Program
     static void Main()
     {
         string csSolutionDirectory = "F:\\sampleAbpProject\\RSLog2.0\\src\\Rocscience.RSLog.Web";
-        string jsonPath = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\en.json";
+        string jsonPath = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\files\\en.json";
+        string txtFlie = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\files\\rslogmissedkeys.txt";
         
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
 

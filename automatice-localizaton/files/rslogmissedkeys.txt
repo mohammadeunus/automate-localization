@@ -1,0 +1,498 @@
+Download Templates
+CSV Uploads
+Read Documentation
+Read Documentation
+Read Documentation
+CreatenewLocalization
+Audit Logs
+Audit Logs
+Logger Details
+Error Details
+Method Name
+Parameter
+Service Name
+Borehole Log Templates
+Figure Templates
+Offline App
+New Photo
+Additional Settings
+Miscellaneous Data
+EnterLattitude
+County
+County
+Route
+Route
+Postmile
+Postmile
+Additional Settings
+EnterLattitude
+Structure Name
+Structure Number
+County
+County
+Route
+Route
+Postmile
+Postmile
+Current
+Archived
+Transferred
+Location
+Location
+CompanyCodeOfDestinationRSLogAccount:
+OK
+AdditionalSettings
+StructureName
+StructureName
+County
+County
+Route
+Route
+Postmile
+Postmile
+Loggers
+Loggers
+Logger Details
+Error Details
+ 
+Rock Classification
+Soil Classification
+Field Investigation
+Templates
+Hatch Design
+Dry Density 
+Cohesion 
+Manage Tests 
+Test Name 
+LiquefactionTriggeringAnalysisMethod 
+MonthlyCost
+MonthlyCost 
+Select Report Template
+Report Title
+Report Title 
+Menu:Support
+Post a Question 
+Menu:FieldTests
+Test Data Columns 
+Location of 
+Location Type
+Entered by
+entered by
+Show on map
+Place on map
+Elevation Survey Method
+Elevation Survey Method
+Elevation Benchmark / Datum
+Benchmark
+Horizontal Survey Method
+Horizontal Survey Method
+Horizontal Survey Benchmark / Datum
+Horizontal Survey Benchmark 
+Structure
+Station Line
+Station Line 
+Station
+Hammer Type
+Hammer Type
+Hammer ID
+Hammer ID
+Hammer Drop
+Hammer Drop
+Hammer Weight (LB)
+Hammer Weight
+Hammer Energy Level (%)  
+Lifting Mechanism
+Start Notes
+Start Notes
+Termination Notes
+Termination Notes 
+Borehole Survey
+-------------------
+-------------------
+Edit Tab Items
+-------------------
+Pre-Investigation Planner
+Engineer
+Location  
+Coordinates 
+Generate Test Holes Map 
+CrossSectionHaderText
+Generate Cross-Section Report 
+Photos Report
+Menu:PhotosReport
+Select Photos
+Photo Title
+Photos Per Page
+Generate Photo Report 
+Edit Role
+Edit Role 
+New User
+User Information
+Lastname
+Lastname
+Two Factor Authentication 
+User Information
+Two Factor Authentication 
+Username 
+Select Coordinate Reference System (CRS)
+Search For CRS:
+TestDataInputUnit: 
+Import 
+Licensekey
+AdminEmailAddress
+Two Factor Authentication 
+Email Address
+Two Factor Authentication
+Licensekey 
+EnterFrom
+Instrument Installed 
+EnterAlpha
+EnterBeta 
+CoreBox
+Total Core
+Total Length  
+Sealed Depth 
+EnterFrom 
+END CAP TYPE (BOTTOM) 
+Color Term:
+Color Code (Munsell)
+Joiner Term: 
+CoreRecovery 
+Copy 
+EnterFrom   
+Major Type
+Category
+Geologic Unit 
+Line Style 
+SoilLayerColor  
+SPT Rules
+Status Options
+Extra Tags
+Compact
+Spreadsheet
+ThisSyleResemblesEditingSpreadsheet
+Location
+Test Hole Completion Notes
+Start Notes
+Start Notes
+Termination Notes
+Termination Notes 
+Sampling and Boring
+Field Tests
+Sample Type
+Log Icon
+Moisture Descriptor
+Boring Method
+DeterMineHowConsistyOrRelative
+Descriptor
+Min SPT-N
+Max SPT-N
+Density Descriptor
+Min SPT-N
+Max SPT-N
+Borehole Survey
+Piezo Type
+Plug Type 
+Category  
+Hatech Pattern Name 
+Rock Types
+Slaking
+Grain Size
+Bedding Spacing
+Fracture Density
+Alteration
+Strength
+Defects
+Term
+Crystalline Igneous and Metamorphic Rock
+Clastic Rock
+Pyroclastic Igneous Rock
+Term
+Average Crystal Size S (inch)
+Lithified Product
+Fragment
+Lithified Product
+Grain Size S (inch)
+Term
+Description (thickness/spacing Sb)
+Term
+Description (observed fracture density)
+Term
+Term
+Term
+Term
+UCS (MPa)
+Surface Shape
+Infill type
+Infill Thickness
+Infill Character
+Term
+Term
+Term
+Igneous Rocks
+Sedimentary Rocks
+Metamorphic Rocks
+Category
+Rock Name
+Name Modifiers
+Category
+Rock Name
+Name Modifiers
+Category
+Rock Name
+Name Modifiers 
+Color Terms
+Proportion
+Particle Size
+Particle Angularity
+Particle Shape
+Plasticity
+Dry Strength
+Dilatancy
+Toughness
+Structure
+Cementation
+Interbed Joiner
+Definition
+Criteria
+Seive Size
+Approximate Particle Size
+Criteria  
+Default Settings
+Layer Description Compiler
+Default Test Hole Log Template
+Default Figure Template
+BoreholeLogDesc 
+Date Format
+TUTORIAL OVERLAY SCREENS
+Drill Holes
+Test Pits
+Marker Lable Size 
+Home
+Application
+Borehole Survey
+Data Entry & Design
+Test Holes
+Cross Sections
+ProjectSummary
+Import
+Account
+My Profile
+Log Out 
+Save Changes 
+Profile Information
+Save Changes 
+Observation  
+Code
+EnterId
+Dip(o)
+EnterDip
+Spacing
+EnerSpacing
+EnterComposition
+PleaseSelectWeathering 
+PleaseSelectVariable
+PleaseSelectGrainSize
+PleaseSelectBeddingThickness
+ColorChangesTo
+PleaseSelectColor
+PleaseSelectWeathering
+PleaseSelectHardness 
+PleaseSelectVariable 
+Log Columns 
+Descriptor 
+Field Test
+Test Data Columns 
+Descriptor  
+ICON  
+Category 
+Pattern Name 
+Lithified Product
+Lithified Product
+Enter Description 
+Term
+Enter Term 
+Fragment
+Fragment
+Lithified Product
+Lithified Product
+Grain Size
+Grain Size 
+Term
+Term
+Crystal Size 
+Term
+Term
+Enter Description 
+Category
+Category
+Rock Name
+Rock Name
+Name Modifiers
+Name Modifiers
+Enter Description 
+Update Cementation
+Create Cementation
+Criteria 
+Update Color Term
+Create New Color Term
+Definition 
+Update Dilatancy
+Create Dilatancy
+Criteria 
+Update Dry Strength
+Create Dry Strength
+Criteria 
+Update Interbed Joiner
+Create Interbed Joiner
+Criteria 
+Update Particle Angularity
+Create Particle Angularity
+Criteria 
+Update Particle Shape
+Create Particle Shape
+Criteria 
+Update Particle Size
+Create Particle Size
+Seive Size
+Approximate Particle Size 
+Update Plasticity
+Create Plasticity
+Criteria 
+Update Proportion Of Soil
+Create Proportion Of Soil
+Criteria 
+Update Structure
+Create Structure
+Criteria 
+Update Toughness
+Create Toughness
+Criteria 
+Drilling Observations
+Interim Changes
+Grain Size
+Bedding Thickness
+Slaking
+RockColor
+Unit Weight
+Layer Line Style
+Color Term:
+Color Code (Munsell)
+Joiner Term:
+Color Code (Munsell)
+Intensely Wathered to Decomposed
+Decomposed
+Poorly Indurated
+Fracture Density
+Strength
+Fracture Conditions
+Input Criteria
+Input Criteria
+Components
+Moisture
+Consistency
+Structure
+ColorTerm:
+Percent
+Proportion
+Plasticity
+Dilatancy
+Toughness
+Percent
+Proportion
+Angularity
+Cementation
+Percent
+Proportion
+Angularity
+Cementation
+Angularity
+Angularity 
+Strength 
+Soil Color
+Strength 
+Moisture
+Consistency
+Density
+Structure
+JoinerTerm:
+Percent
+Proportion
+Plasticity
+Dilatancy
+Toughness
+Percent
+Proportion
+Angularity
+Cementation
+Percent
+Proportion
+Angularity
+Cementation
+Percent
+Angularity
+Percent
+Angularity 
+Interbed Joiner
+Soil Color
+Color Term:
+Color Code (Munsell)
+Joiner Term:
+Color Code (Munsell)
+Major Type
+Moisture
+Consistency
+Density
+Structure
+Enter the details applicable to each component
+Percent
+Proportion
+Plasticity
+Dry Strength
+Dilatancy
+Toughness
+Percent
+Proportion
+Angularity
+Cementation
+Percent
+Proportion
+Angularity
+Cementation
+Percent
+Angularity
+Percent
+Angularity
+Interbedded Layer Description 
+Layer Thickness
+Soil Color
+Color Term:
+Color Code (Munsell)
+Joiner Term:
+Color Code (Munsell)
+Major Type
+Moisture
+Consistency
+Density
+Structure
+Enter the details applicable to each component
+Percent
+Proportion
+Plasticity
+Dry Strength
+Dilatancy
+Toughness
+Percent
+Proportion
+Angularity
+Cementation
+Percent
+Proportion
+Angularity
+Cementation
+Percent
+Angularity
+Percent
+Angularity
+ToFormatTheText 
+hide 
