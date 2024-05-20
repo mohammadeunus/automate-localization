@@ -12,14 +12,15 @@ class Program
 
         string[] csFiles = Directory.GetFiles(csSolutionDirectory, $"*.{"cshtml"}", SearchOption.AllDirectories);
 
-        List<string> csAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"L\[""(.*?)""\]");
-        List<string> jsAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"l\('([^']*)'\)");
+        //List<string> csAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"L\[""(.*?)""\]");
+        //List<string> jsAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"l\('([^']*)'\)");
+        List<string> UniqueValues = Read_text_file.GetAllUniqueValues(txtFlie);
 
-        List<string> csMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(csAllUsedLocalizedKey, stringKeys);
-        List<string> jsMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(jsAllUsedLocalizedKey, stringKeys);
+        //List<string> csMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(csAllUsedLocalizedKey, stringKeys);
+        //List<string> jsMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(jsAllUsedLocalizedKey, stringKeys);
 
-        foreach (var missedString in csMissingKeysInJsonFile) Console.WriteLine(missedString);
-        foreach (var missedString in jsMissingKeysInJsonFile) Console.WriteLine(missedString);
+        //foreach (var missedString in csMissingKeysInJsonFile) Console.WriteLine(missedString);
+        foreach (var missedString in UniqueValues) Console.WriteLine(missedString);
 
     }
 
