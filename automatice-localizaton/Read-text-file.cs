@@ -5,7 +5,7 @@ using System.Linq;
 
 public static class Read_text_file
 {
-    internal static List<string> GetAllUniqueValues(List<string> lines)
+    internal static List<string> GenerateKeys(List<string> lines)
     {
         var uniqueValues = new Dictionary<string, string>();
 

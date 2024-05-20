@@ -20,7 +20,7 @@ class Program
         // remove matching value with stringKeys from the txtList
 
         // generate unique key from the txtList
-        List<string> UniqueValues = Read_text_file.GetAllUniqueValues(txtList); 
+        List<string> UniqueValues = Read_text_file.GenerateKeys(txtList); 
         
         foreach (var missedString in UniqueValues) Console.WriteLine(missedString);
     }
