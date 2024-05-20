@@ -10,15 +10,19 @@ class Program
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
 
         string[] csFiles = Directory.GetFiles(csSolutionDirectory, $"*.{"cshtml"}", SearchOption.AllDirectories);
+        string[] jsFiles = Directory.GetFiles(csSolutionDirectory, $"*.{"js"}", SearchOption.AllDirectories);
 
         List<string> csAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"L\[""(.*?)""\]");
-        List<string> jsAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"l\('([^']*)'\)");
+        List<string> jsInCshtmlAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(csFiles, @"l\('([^']*)'\)");
+        List<string> jsAllUsedLocalizedKey = Read_cshtml_file.GetAllUsedLocalizedKey(jsFiles, @"l\('([^']*)'\)");
 
         List<string> csMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(csAllUsedLocalizedKey, stringKeys);
+        List<string> jsInCshtmlMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(jsInCshtmlAllUsedLocalizedKey, stringKeys);
         List<string> jsMissingKeysInJsonFile = List_dictionary_modifier.GetNonMatchingKeys(jsAllUsedLocalizedKey, stringKeys);
 
         foreach (var missedString in csMissingKeysInJsonFile) Console.WriteLine(missedString);
         Console.WriteLine("-----------------------------js file now --------------------------------------");
+        foreach (var missedString in jsInCshtmlMissingKeysInJsonFile) Console.WriteLine(missedString);
         foreach (var missedString in jsMissingKeysInJsonFile) Console.WriteLine(missedString);
 
     }
