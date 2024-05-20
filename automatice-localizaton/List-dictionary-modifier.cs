@@ -112,4 +112,10 @@ internal static class List_dictionary_modifier
         }
         return nonMatchingKeys;
     }
+
+    internal static List<string> RemoveDuplicates(List<string> txtList)
+    {
+        return new HashSet<string>(txtList).ToList();
+    }
+
 }

@@ -107,10 +107,7 @@ Start Notes
 Termination Notes
 Termination Notes 
 Borehole Survey
--------------------
--------------------
 Edit Tab Items
--------------------
 Pre-Investigation Planner
 Engineer
 Location  

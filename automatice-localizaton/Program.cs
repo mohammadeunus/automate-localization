@@ -16,11 +16,10 @@ class Program
         List<string> txtList = Read_text_file.GetAsList(txtFilePath);
 
         // remove duplicate from the txtList
-
-        // remove matching value with stringKeys from the txtList
+        List<string> txtListDuplicateRemoved = List_dictionary_modifier.RemoveDuplicates(txtList);
 
         // generate unique key from the txtList
-        List<string> UniqueValues = Read_text_file.GenerateKeys(txtList); 
+        List<string> UniqueValues = Read_text_file.GenerateKeys(txtListDuplicateRemoved); 
         
         foreach (var missedString in UniqueValues) Console.WriteLine(missedString);
     }
