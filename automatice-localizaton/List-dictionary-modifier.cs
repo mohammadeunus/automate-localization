@@ -118,4 +118,17 @@ internal static class List_dictionary_modifier
         return new HashSet<string>(txtList).ToList();
     }
 
+    internal static List<string> SortList(List<string> txtList)
+    {
+        List<string> newTxtList = new List<string>();
+        foreach (var item in txtList)
+        {
+            newTxtList.Add(item.Trim());
+        }
+        // Create a new list to avoid modifying the original list
+        var sortedList = new HashSet<string>(newTxtList).ToList();
+        sortedList.Sort();
+        return sortedList;
+    }
+
 }

@@ -15,13 +15,15 @@ class Program
         // get values as list in txtList
         List<string> txtList = Read_text_file.GetAsList(txtFilePath);
 
+        txtList = List_dictionary_modifier.SortList(txtList);
+
         // remove duplicate from the txtList
         List<string> txtListDuplicateRemoved = List_dictionary_modifier.RemoveDuplicates(txtList);
 
         // generate unique key from the txtList
         List<string> UniqueValues = Read_text_file.GenerateKeys(txtListDuplicateRemoved); 
         
-        foreach (var missedString in UniqueValues) Console.WriteLine(missedString);
+        foreach (var missedString in txtListDuplicateRemoved) Console.WriteLine(missedString);
     }
 
 }

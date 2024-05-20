@@ -1,0 +1,274 @@
+Account
+Additional Settings
+AdditionalSettings
+AdminEmailAddress
+Alteration
+Angularity
+Application
+Approximate Particle Size
+Archived
+Audit Logs
+Average Crystal Size S (inch)
+Bedding Spacing
+Bedding Thickness
+Benchmark
+Borehole Log Templates
+Borehole Survey
+BoreholeLogDesc
+Boring Method
+Category
+Cementation
+Clastic Rock
+Code
+Cohesion
+Color Code (Munsell)
+Color Term:
+Color Terms
+ColorChangesTo
+ColorTerm:
+Compact
+CompanyCodeOfDestinationRSLogAccount:
+Components
+Consistency
+Coordinates
+Copy
+CoreBox
+CoreRecovery
+County
+Create Cementation
+Create Dilatancy
+Create Dry Strength
+Create Interbed Joiner
+Create New Color Term
+Create Particle Angularity
+Create Particle Shape
+Create Particle Size
+Create Plasticity
+Create Proportion Of Soil
+Create Structure
+Create Toughness
+CreatenewLocalization
+Criteria
+Cross Sections
+CrossSectionHaderText
+Crystal Size
+Crystalline Igneous and Metamorphic Rock
+CSV Uploads
+Current
+Data Entry & Design
+Date Format
+Decomposed
+Default Figure Template
+Default Settings
+Default Test Hole Log Template
+Defects
+Definition
+Density
+Density Descriptor
+Description (observed fracture density)
+Description (thickness/spacing Sb)
+Descriptor
+DeterMineHowConsistyOrRelative
+Dilatancy
+Dip(o)
+Download Templates
+Drill Holes
+Drilling Observations
+Dry Density
+Dry Strength
+Edit Role
+Edit Tab Items
+Elevation Benchmark / Datum
+Elevation Survey Method
+Email Address
+END CAP TYPE (BOTTOM)
+EnerSpacing
+Engineer
+Enter Description
+Enter Term
+Enter the details applicable to each component
+EnterAlpha
+EnterBeta
+EnterComposition
+EnterDip
+entered by
+Entered by
+EnterFrom
+EnterId
+EnterLattitude
+Error Details
+Extra Tags
+Field Investigation
+Field Test
+Field Tests
+Figure Templates
+Fracture Conditions
+Fracture Density
+Fragment
+Generate Cross-Section Report
+Generate Photo Report
+Generate Test Holes Map
+Geologic Unit
+Grain Size
+Grain Size S (inch)
+Hammer Drop
+Hammer Energy Level (%)
+Hammer ID
+Hammer Type
+Hammer Weight
+Hammer Weight (LB)
+Hatch Design
+Hatech Pattern Name
+hide
+Home
+Horizontal Survey Benchmark
+Horizontal Survey Benchmark / Datum
+Horizontal Survey Method
+ICON
+Igneous Rocks
+Import
+Infill Character
+Infill Thickness
+Infill type
+Input Criteria
+Instrument Installed
+Intensely Wathered to Decomposed
+Interbed Joiner
+Interbedded Layer Description
+Interim Changes
+Joiner Term:
+JoinerTerm:
+Lastname
+Layer Description Compiler
+Layer Line Style
+Layer Thickness
+Licensekey
+Lifting Mechanism
+Line Style
+LiquefactionTriggeringAnalysisMethod
+Lithified Product
+Location
+Location of
+Location Type
+Log Columns
+Log Icon
+Log Out
+Logger Details
+Loggers
+Major Type
+Manage Tests
+Marker Lable Size
+Max SPT-N
+Menu:FieldTests
+Menu:PhotosReport
+Menu:Support
+Metamorphic Rocks
+Method Name
+Min SPT-N
+Miscellaneous Data
+Moisture
+Moisture Descriptor
+MonthlyCost
+My Profile
+Name Modifiers
+New Photo
+New User
+Observation
+Offline App
+OK
+Parameter
+Particle Angularity
+Particle Shape
+Particle Size
+Pattern Name
+Percent
+Photo Title
+Photos Per Page
+Photos Report
+Piezo Type
+Place on map
+Plasticity
+PleaseSelectBeddingThickness
+PleaseSelectColor
+PleaseSelectGrainSize
+PleaseSelectHardness
+PleaseSelectVariable
+PleaseSelectWeathering
+Plug Type
+Poorly Indurated
+Post a Question
+Postmile
+Pre-Investigation Planner
+Profile Information
+ProjectSummary
+Proportion
+Pyroclastic Igneous Rock
+Read Documentation
+Report Title
+Rock Classification
+Rock Name
+Rock Types
+RockColor
+Route
+Sample Type
+Sampling and Boring
+Save Changes
+Sealed Depth
+Search For CRS:
+Sedimentary Rocks
+Seive Size
+Select Coordinate Reference System (CRS)
+Select Photos
+Select Report Template
+Service Name
+Show on map
+Slaking
+Soil Classification
+Soil Color
+SoilLayerColor
+Spacing
+Spreadsheet
+SPT Rules
+Start Notes
+Station
+Station Line
+Status Options
+Strength
+Structure
+Structure Name
+Structure Number
+StructureName
+Surface Shape
+Templates
+Term
+Termination Notes
+Test Data Columns
+Test Hole Completion Notes
+Test Holes
+Test Name
+Test Pits
+TestDataInputUnit:
+ThisSyleResemblesEditingSpreadsheet
+ToFormatTheText
+Total Core
+Total Length
+Toughness
+Transferred
+TUTORIAL OVERLAY SCREENS
+Two Factor Authentication
+UCS (MPa)
+Unit Weight
+Update Cementation
+Update Color Term
+Update Dilatancy
+Update Dry Strength
+Update Interbed Joiner
+Update Particle Angularity
+Update Particle Shape
+Update Particle Size
+Update Plasticity
+Update Proportion Of Soil
+Update Structure
+Update Toughness
+User Information
+Username
