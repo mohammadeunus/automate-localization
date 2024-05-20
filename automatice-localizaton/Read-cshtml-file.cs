@@ -184,7 +184,7 @@ internal class Read_cshtml_file
         return missingKeyInJsonFile;
     }
 
-    public static void OverrideInLocalizedString(string filePath, Dictionary<string, string> matchedKeys)
+    public static void UpdateLocalizedString(string filePath, Dictionary<string, string> matchedKeys)
     {
         try
         {

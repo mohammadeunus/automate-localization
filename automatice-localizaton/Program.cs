@@ -13,7 +13,7 @@ class Program
 
         foreach (var filePath in cshtmlFiles)
         {
-            Read_cshtml_file.OverrideInLocalizedString(filePath, stringKeys);
+            Read_cshtml_file.UpdateLocalizedString(filePath, stringKeys);
         }
     }
 
