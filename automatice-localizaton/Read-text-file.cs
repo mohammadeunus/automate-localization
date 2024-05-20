@@ -7,20 +7,9 @@ public static class Read_text_file
 {
     internal static List<string> GetAllUniqueValues(string txtFilePath)
     {
-        if (string.IsNullOrEmpty(txtFilePath))
-        {
-            throw new ArgumentException("File path cannot be null or empty.", nameof(txtFilePath));
-        }
-
-        if (!File.Exists(txtFilePath))
-        {
-            throw new FileNotFoundException("File not found.", txtFilePath);
-        }
-
         // Read all lines from the file
         var lines = File.ReadAllLines(txtFilePath);
 
-        // Use a dictionary to store unique values
         var uniqueValues = new Dictionary<string, string>();
 
         foreach (var line in lines)
@@ -34,7 +23,6 @@ public static class Read_text_file
             }
         }
 
-        // Convert dictionary entries to the expected output format
         var formattedList = uniqueValues.Select(kvp => $"\"{kvp.Key}\" : \"{kvp.Value}\"").ToList();
         return formattedList;
     }
