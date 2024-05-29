@@ -183,4 +183,15 @@ internal class Read_cshtml_file
 
         return missingKeyInJsonFile;
     }
+
+    internal static List<string> GetNotLocalizedStringKeyValuePair(string[] csFiles, Dictionary<string, string> stringKeys)
+    {
+        List<string> output = new();
+        foreach (var item in csFiles)
+        {
+
+
+        }
+        return output;
+    }
 }
