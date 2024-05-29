@@ -11,9 +11,9 @@ class Program
 
         string[] csFiles = Directory.GetFiles(solutionDirectory, $"*.{"cshtml"}", SearchOption.AllDirectories);
 
-        List<string> csMissingKeysInJsonFile = Read_cshtml_file.GetNotLocalizedStringKeyValuePair(csFiles, stringKeys);
+        List<string> notLocalizedStringKeyValuePair = Read_cshtml_file.GetNotLocalizedStringKeyValuePair(csFiles, stringKeys);
 
-        foreach (var missedString in csMissingKeysInJsonFile) Console.WriteLine(missedString);
+        foreach (var missedString in notLocalizedStringKeyValuePair) Console.WriteLine(missedString);
     }
 
 }
