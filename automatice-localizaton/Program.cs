@@ -8,8 +8,9 @@ class Program
         string jsonPath = "C:\\Users\\User\\source\\repos\\automatice-localizaton\\automate-localization\\automatice-localizaton\\en.json";
 
         Dictionary<string, string> stringKeys = Read_json_file.GetKeyValuePair(jsonPath);
+        
+        var result = Read_cshtml_file.ExtractStringsFromCSHTML(filePath);
 
-        Read_cshtml_file.OverrideFile(filePath, stringKeys);
     }
 
 }
